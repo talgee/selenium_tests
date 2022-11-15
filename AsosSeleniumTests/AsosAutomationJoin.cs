@@ -67,6 +67,20 @@ namespace AsosSeleniumTests
         }
 
         [Test]
+        public void AllJoinigOption()
+        {
+            WebDriver = common.AsosGoToJoin(WebDriver, BaseUrl);
+
+            bool isElementDisplayedGoogle = WebDriver.FindElement(By.Id("signup-google")).Displayed;
+            bool isElementDisplayedApple = WebDriver.FindElement(By.Id("signup-google")).Displayed;
+            bool isElementDisplayedFaceBook = WebDriver.FindElement(By.Id("signup-google")).Displayed;
+
+            Assert.IsTrue(isElementDisplayedGoogle);
+            Assert.IsTrue(isElementDisplayedApple);
+            Assert.IsTrue(isElementDisplayedFaceBook);
+        }
+
+        [Test]
         public void NoDates()
         {
             WebDriver = common.AsosGoToJoin(WebDriver, BaseUrl);

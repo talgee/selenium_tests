@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dell\\source\\repos\\selenium_tests\\AsosSeleniumTests\\AsosSeleniumTests.csproj": {}
+    "C:\\Users\\dell\\Documents\\GitHub\\selenium_tests\\AsosSeleniumTests\\AsosSeleniumTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dell\\source\\repos\\selenium_tests\\AsosSeleniumTests\\AsosSeleniumTests.csproj": {
+    "C:\\Users\\dell\\Documents\\GitHub\\selenium_tests\\AsosSeleniumTests\\AsosSeleniumTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dell\\source\\repos\\selenium_tests\\AsosSeleniumTests\\AsosSeleniumTests.csproj",
+        "projectUniqueName": "C:\\Users\\dell\\Documents\\GitHub\\selenium_tests\\AsosSeleniumTests\\AsosSeleniumTests.csproj",
         "projectName": "AsosSeleniumTests",
-        "projectPath": "C:\\Users\\dell\\source\\repos\\selenium_tests\\AsosSeleniumTests\\AsosSeleniumTests.csproj",
+        "projectPath": "C:\\Users\\dell\\Documents\\GitHub\\selenium_tests\\AsosSeleniumTests\\AsosSeleniumTests.csproj",
         "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dell\\source\\repos\\selenium_tests\\AsosSeleniumTests\\obj\\",
+        "outputPath": "C:\\Users\\dell\\Documents\\GitHub\\selenium_tests\\AsosSeleniumTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",

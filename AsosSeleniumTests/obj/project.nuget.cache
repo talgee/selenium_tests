@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mEhGGvpebbr5owIuzcqugRGRre1u7zulOOTTLjMolZQgvCpi3UvaG/6Nwt69y3iSXdULpDmY2ET/cCpEnMVaYQ==",
+  "dgSpecHash": "nCYFtW2rrW/ePSLdr5vnbZNVw+itmoUDHE7mHmpLzT98DByo/NXxEG8qj2ulybeofvdwLX2EhxYI48GerOdwDQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dell\\source\\repos\\selenium_tests\\AsosSeleniumTests\\AsosSeleniumTests.csproj",
+  "projectFilePath": "C:\\Users\\dell\\Documents\\GitHub\\selenium_tests\\AsosSeleniumTests\\AsosSeleniumTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dell\\.nuget\\packages\\anglesharp\\0.17.1\\anglesharp.0.17.1.nupkg.sha512",
     "C:\\Users\\dell\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
