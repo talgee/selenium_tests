@@ -42,6 +42,20 @@ namespace AsosSeleniumTests
             genderList[2].FindElement(By.XPath("//label[@for='male']")).Click();
         }
 
+        public void YouAreNotARobot(WebDriver webDriver) 
+        {
+            try
+            {
+                WebDriverWait wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(20));
+                wait.Until(ExpectedConditions.ElementIsVisible(By.Id("register")));
+                webDriver.FindElement(By.Id("register")).Click();
+            }
+            catch
+            {
+                Console.WriteLine("No you are not a robot screen");
+            }
+        }
+
         public WebDriver AsosGoToJoin(WebDriver WebDriver, string BaseUrl)
         {
             WebDriver.Navigate().GoToUrl(BaseUrl);

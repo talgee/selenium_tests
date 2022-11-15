@@ -1,4 +1,6 @@
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 
 namespace AsosSeleniumTests
 {
@@ -51,6 +53,8 @@ namespace AsosSeleniumTests
 
             WebDriver.FindElement(By.XPath("//input[@type='submit']")).Click();
 
+            common.YouAreNotARobot(WebDriver);
+
             try
             {
                 bool isElementDisplayed = WebDriver.FindElement(By.Id("chrome-header")).Displayed;
@@ -67,17 +71,59 @@ namespace AsosSeleniumTests
         }
 
         [Test]
-        public void AllJoinigOption()
+        public void AllJoinigOptions()
         {
             WebDriver = common.AsosGoToJoin(WebDriver, BaseUrl);
 
             bool isElementDisplayedGoogle = WebDriver.FindElement(By.Id("signup-google")).Displayed;
-            bool isElementDisplayedApple = WebDriver.FindElement(By.Id("signup-google")).Displayed;
-            bool isElementDisplayedFaceBook = WebDriver.FindElement(By.Id("signup-google")).Displayed;
+            bool isElementDisplayedApple = WebDriver.FindElement(By.Id("signup-apple")).Displayed;
+            bool isElementDisplayedFaceBook = WebDriver.FindElement(By.Id("signup-facebook")).Displayed;
 
             Assert.IsTrue(isElementDisplayedGoogle);
             Assert.IsTrue(isElementDisplayedApple);
             Assert.IsTrue(isElementDisplayedFaceBook);
+        }
+
+        [Test]
+        public void GoogleSignInVerification()
+        {
+            WebDriver = common.AsosGoToJoin(WebDriver, BaseUrl);
+
+            WebDriver.FindElement(By.Id("signup-google")).Click();
+
+            bool isElementDisplayedGoogle = WebDriver.FindElement(By.Id("identifierId")).Displayed;
+            bool isElementDisplayedGoogleBtn = WebDriver.FindElement(By.Id("identifierNext")).Displayed;
+
+            Assert.IsTrue(isElementDisplayedGoogle);
+            Assert.IsTrue(isElementDisplayedGoogleBtn);
+        }
+
+        [Test]
+        public void AppleSignInVerification()
+        {
+            WebDriver = common.AsosGoToJoin(WebDriver, BaseUrl);
+
+            WebDriver.FindElement(By.Id("signup-apple")).Click();
+
+            bool isElementDisplayedApple = WebDriver.FindElement(By.Id("account_name_text_field")).Displayed;
+
+            Assert.IsTrue(isElementDisplayedApple);
+        }
+
+        [Test]
+        public void FacebookSignInVerification()
+        {
+            WebDriver = common.AsosGoToJoin(WebDriver, BaseUrl);
+
+            WebDriver.FindElement(By.Id("signup-facebook")).Click();
+
+            bool isElementDisplayedFacebookEmail = WebDriver.FindElement(By.Id("email")).Displayed;
+            bool isElementDisplayedFacebookpass = WebDriver.FindElement(By.Id("pass")).Displayed;
+            bool isElementDisplayedFacebookloginbutton = WebDriver.FindElement(By.Id("loginbutton")).Displayed;
+
+            Assert.IsTrue(isElementDisplayedFacebookEmail);
+            Assert.IsTrue(isElementDisplayedFacebookpass);
+            Assert.IsTrue(isElementDisplayedFacebookloginbutton);
         }
 
         [Test]
